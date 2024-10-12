@@ -1,0 +1,15 @@
+C:\Maharishi University\CSharp\algorithms\bin\Debug\net8.0\algorithms.exe
+C:\Maharishi University\CSharp\algorithms\bin\Debug\net8.0\algorithms.deps.json
+C:\Maharishi University\CSharp\algorithms\bin\Debug\net8.0\algorithms.runtimeconfig.json
+C:\Maharishi University\CSharp\algorithms\bin\Debug\net8.0\algorithms.dll
+C:\Maharishi University\CSharp\algorithms\bin\Debug\net8.0\algorithms.pdb
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.AssemblyInfoInputs.cache
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.AssemblyInfo.cs
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.csproj.CoreCompileInputs.cache
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.sourcelink.json
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.dll
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\refint\algorithms.dll
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.pdb
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\algorithms.genruntimeconfig.cache
+C:\Maharishi University\CSharp\algorithms\obj\Debug\net8.0\ref\algorithms.dll
