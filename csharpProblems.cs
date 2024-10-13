@@ -1,4 +1,22 @@
-public class W1d1probs {
+public class csharpProblems {
+    public int CountPrimes(int n) {
+      int count = 0; 
+		int[] a = new int[n];
+
+		for (int i = 2; i < n; i++) {
+			if (a[i] != -1) {
+				count++;
+
+				for (int j = 2 * i; j < n; j += i) {
+					a[j] = -1;
+				}
+			}
+		}
+
+		return count;
+    }
+
+
     public bool IsAnagram(string s, string t) {
         if(s.Length != t.Length) return false;
         
@@ -88,5 +106,8 @@ public class ListNode {
     public bool Empty() {
         return queue.Count == 0;
     }
-}
+ }
+
+
+     
 
