@@ -48,8 +48,33 @@ public class csharpProblems {
         return prev;
     }
 
+    public long maxKelements(int[] nums, int k) {
+        var pq = new PriorityQueue<long, long>();
+        long score = 0;
+   
+        for (var i = 0; i < nums.Length; i++){
+             Console.WriteLine("First Param "+(long)nums[i] + " Second Param " +(long)-1 * nums[i]);
+            pq.Enqueue((long)nums[i], (long)-1 * nums[i]);
+        }
+       
+        
+        while (k != 0 && pq.Count > 0)
+        {             Console.WriteLine("K value " + k + " PQ Count " + pq.Count);
+            var m = pq.Dequeue();
+            Console.WriteLine("M value " +m);
+            score += m;
+
+            // Add number again
+            pq.Enqueue((long)Math.Ceiling((decimal)m / 3), -1 * (long)Math.Ceiling((decimal)m / 3));
+            k--;
+        }
+        
+        return score;
+    }
+
     
 }
+
 
 public class ListNode {
     public int val;

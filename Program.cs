@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 csharpProblems csharp= new csharpProblems();
-int primeCount = csharp.CountPrimes(12);
+int[] nums={1,10,3,3,3};
+int k=3;
+long maxElement = csharp.maxKelements(nums,  k);
 
-    Console.WriteLine("Prime Count!" +primeCount );
+    Console.WriteLine("Prime Count!" +maxElement);
