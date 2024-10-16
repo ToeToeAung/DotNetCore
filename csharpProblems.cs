@@ -1,3 +1,7 @@
+
+     
+using System;
+using System.Text;
 public class csharpProblems {
     public int CountPrimes(int n) {
       int count = 0; 
@@ -134,5 +138,38 @@ public class ListNode {
  }
 
 
-     
+public class PriorityQueueClass {
+    public string LongestDiverseString(int a, int b, int c) {
+        	var sb = new StringBuilder();
+		var pq = new PriorityQueue<char, int>(Comparer<int>.Create((a, b) => b.CompareTo(a)));
+		if (a != 0) pq.Enqueue('a', a);
+		if (b != 0) pq.Enqueue('b', b);
+		if (c != 0) pq.Enqueue('c', c);
+		
+		while (pq.Count != 0)
+		{
+			pq.TryDequeue(out var currentChar, out var currentCount);
+			
+			if (sb.Length >= 2 && sb[sb.Length - 1] == sb[sb.Length - 2] && sb[sb.Length - 1] == currentChar)
+			{
+				if (!pq.TryDequeue(out var nextChar, out var nextCount))
+					break;
+				
+				sb.Append(nextChar);
+				nextCount--;
+				if (nextCount != 0)
+					pq.Enqueue(nextChar, nextCount);
+			}
+			else
+			{
+				currentCount--;
+				sb.Append(currentChar);
+			}
 
+			if (currentCount != 0)
+				pq.Enqueue(currentChar, currentCount);
+		}
+
+		return sb.ToString();
+    }
+}
