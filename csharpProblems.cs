@@ -138,7 +138,17 @@ public class ListNode {
  }
 
 
-public class PriorityQueueClass {
+public class Solution {
+
+public double myPow(double x, int n) {
+      
+     if(n<0) return 1/x * myPow(1/x, -(n+1));
+        if(n==0) return 1;
+        if(n==2) return x*x;
+        if(n%2==0) return myPow( myPow(x, n/2), 2);
+        else return x*myPow( myPow(x, n/2), 2);
+    }
+
     public string LongestDiverseString(int a, int b, int c) {
         	var sb = new StringBuilder();
 		var pq = new PriorityQueue<char, int>(Comparer<int>.Create((a, b) => b.CompareTo(a)));

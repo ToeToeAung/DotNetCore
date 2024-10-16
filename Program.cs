@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-PriorityQueueClass csharp= new PriorityQueueClass();
-var result = csharp.LongestDiverseString(1, 1, 7);
+Solution csharp= new Solution();
+var result = csharp.myPow(3,6);
         
         // Print the result.
         Console.WriteLine(result);
