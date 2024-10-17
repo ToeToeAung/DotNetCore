@@ -140,6 +140,34 @@ public class ListNode {
 
 public class Solution {
 
+    public int MaximumSwap(int num) {
+            
+        int[] last = new int[10];
+        char[] charArr = num.ToString().ToCharArray();
+        for(int i = 0; i < charArr.Length; i++)
+        {   Console.WriteLine("char Array with i *** " +charArr[i]);
+            int a = charArr[i] - '0';
+            Console.WriteLine("char Array with charArr[i] - 0 ****" +  a );
+            last[charArr[i] - '0'] = i;
+            Console.WriteLine("char Array last value *** "+   last[charArr[i] - '0']);
+        }
+        
+        for(int i = 0; i < charArr.Length; i++)
+        {       
+            for(int j = 9; j > charArr[i] - '0'; j--)
+            {
+                if(last[j] > i)
+                {
+                    char tmp = charArr[i];
+                    charArr[i] = charArr[last[j]];
+                    charArr[last[j]] = tmp;
+                    return Convert.ToInt32(new string(charArr));
+                }
+            }
+        }
+        
+        return num; 
+    }
 public double myPow(double x, int n) {
       
      if(n<0) return 1/x * myPow(1/x, -(n+1));
