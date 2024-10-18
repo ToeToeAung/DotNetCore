@@ -140,6 +140,33 @@ public class ListNode {
 
 public class Solution {
 
+    public int CountMaxOrSubsets(int[] nums) { 
+        int max = 0;
+        foreach(int item in nums)
+        {
+            max |= item;
+        }
+        
+        return CalculateCounter(nums, 0, max, 0, 0); 
+    }
+  public int CalculateCounter(int[] nums, int idx, int max, int temp, int counter)
+    {
+        if(idx >= nums.Length)
+        {
+            if(temp == max){
+                counter++;
+            }
+
+            return counter;
+        }
+        
+        counter = CalculateCounter(nums, idx + 1, max, temp, counter);
+        counter = CalculateCounter(nums, idx + 1, max, (temp | nums[idx]), counter);
+        
+        return counter;
+    }
+
+
     public int MaximumSwap(int num) {
             
         int[] last = new int[10];
